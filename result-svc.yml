@@ -11,7 +11,7 @@ spec:
   - name: "result-svc"
     port: 80
     targetPort: 80 
-    nodePort: 33001
+    nodePort: 31251
     protocol: TCP
   selector:
     app: res
