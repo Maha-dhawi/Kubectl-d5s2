@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: result
-  name: result
+    app: res
+  name: res
   namespace: vote
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: result
+      app: res
   template:
     metadata:
       labels:
-        app: result
+        app: res
     spec:
       containers:
-      - image: noura93/result:latest
-        name: result
+      - image: dockersamples/examplevotingapp_result:before
+        name: res
         ports:
         - containerPort: 80
-          name: result
+          name: res
