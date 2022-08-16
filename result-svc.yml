@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
   - name: "result-svc"
-    port: 80
+    port: 81
     targetPort: 80 
     nodePort: 31251
     protocol: TCP
