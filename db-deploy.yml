@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - image: postgres
-        name: postgres
+        name: db
         env:
         - name: POSTGRES_USER
           value: postgres
@@ -26,9 +26,3 @@ spec:
         ports:
         - containerPort: 5432
           name: postgres
-        volumeMounts:
-        - mountPath: /var/lib/postgresql/data
-          name: db-data
-      volumes:
-      - name: db-data
-        emptyDir: {} 

@@ -11,7 +11,7 @@ spec:
   ports:
   - name: "vote-svc"
     port: 80
-    targetPort: 80 # or ????
+    targetPort: 80 
     nodePort: 31000
     protocol: TCP
   selector:
