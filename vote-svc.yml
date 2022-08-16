@@ -1,4 +1,3 @@
-#service for vote
 apiVersion: v1
 kind: Service
 metadata:
