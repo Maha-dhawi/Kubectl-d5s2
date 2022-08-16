@@ -4,7 +4,7 @@ metadata:
   labels:
     app: vote
   name: vote
-  namespace: vote
+  namespace: project
 spec:
   replicas: 1
   selector:
@@ -21,69 +21,3 @@ spec:
         ports:
         - containerPort: 80
           name: vote
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#redis service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: redis
-  name: redis
-spec:
-  type: ClusterIP
-  ports:
-  - name: "redis-service"
-    port: 6379
-    targetPort: 6379
-  selector:
-    app: redis
-
-
-
-#postgres service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: postgres-db
-  name: postgres-db
-spec:
-  type: ClusterIP
-  ports:
-  - name: "db-service"
-    port: 5432
-    targetPort: 5432
-  selector:
-    app: postgres-db
-
-
-#result service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: res
-  name: res
-spec:
-  type: NodePort
-  ports:
-  - name: "result-service"
-    port: 80
-    targetPort: 80
-    nodePort: 32000
-  selector:
-    app: res

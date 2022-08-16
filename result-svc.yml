@@ -4,6 +4,7 @@ metadata:
   labels:
     app: res
   name: res
+  namespace: project
 spec:
   type: NodePort
   ports:
